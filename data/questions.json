@@ -1,0 +1,76 @@
+{
+  "questions": [
+    {
+      "category": "Society & Culture",
+      "id": "6293ebcb7f41d6338b96eec0",
+      "correctAnswer": "Scientist who discovered The Theory of Relativity.",
+      "incorrectAnswers": [
+        "Inventor of the telephone.",
+        "38th President of the US.",
+        "One of the principal interpreters of Confucianism."
+      ],
+      "question": "Which of the following describes Albert Einstein?",
+      "tags": ["people", "society_and_culture", "general_knowledge"],
+      "type": "Multiple Choice",
+      "difficulty": "easy",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Arts & Literature",
+      "id": "622a1c367cc59eab6f9501b0",
+      "correctAnswer": "The Two Towers",
+      "incorrectAnswers": [
+        "Life, the Universe and Everything",
+        "The Mysterious Island",
+        "A Connecticut Yankee in King Arthur's Court"
+      ],
+      "question": "Which piece of written work starts with the line 'Aragorn sped on up the hill.'?",
+      "tags": ["arts_and_literature"],
+      "type": "Multiple Choice",
+      "difficulty": "easy",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "History",
+      "id": "622a1c367cc59eab6f950358",
+      "correctAnswer": "John Adams",
+      "incorrectAnswers": [
+        "Thomas Jefferson",
+        "Andrew Jackson",
+        "James Monroe"
+      ],
+      "question": "Who was George Washington's vice-president?",
+      "tags": ["history"],
+      "type": "Multiple Choice",
+      "difficulty": "medium",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Arts & Literature",
+      "id": "622a1c367cc59eab6f950155",
+      "correctAnswer": "Aldous Huxley",
+      "incorrectAnswers": ["George Orwell", "Ernest Hemingway", "TS Elliot"],
+      "question": "Who wrote the book \"Brave New World\"?",
+      "tags": ["literature", "arts_and_literature"],
+      "type": "Multiple Choice",
+      "difficulty": "hard",
+      "regions": [],
+      "isNiche": false
+    },
+    {
+      "category": "Sport & Leisure",
+      "id": "622a1c347cc59eab6f94f888",
+      "correctAnswer": "Tennis",
+      "incorrectAnswers": ["Motor Racing", "Swimming", "Table tennis"],
+      "question": "With which sport is Monica Seles associated?",
+      "tags": ["people", "sport"],
+      "type": "Multiple Choice",
+      "difficulty": "hard",
+      "regions": [],
+      "isNiche": false
+    }
+  ]
+}

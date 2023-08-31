@@ -1,0 +1,244 @@
+/* RESETS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  overflow: hidden;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  background: none;
+}
+
+:root {
+  --background-color: ##f7e987;
+  --text-color: #2f4f4f;
+  --app-color: linear-gradient(to right, #e65c00, #f9d423);
+}
+
+body {
+  background: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Nunito Sans Normal', sans-serif;
+  padding: 3rem;
+  transition: all 1s;
+}
+
+body.dark {
+  color-scheme: dark;
+  --background-color: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  --text-color: #fffff0;
+  --app-color: linear-gradient(to right, #1a2980, #26d0ce);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 90vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: bottom;
+}
+
+.header h1 {
+  font-size: 2rem;
+}
+
+.requirement {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#range {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+#range-limit {
+  font-weight: 600;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+select {
+  font-family: inherit;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+select option {
+  font-family: 'Nunito Sans Normal';
+  font-size: 1.5rem;
+}
+
+#confirm {
+  padding: 1.5rem;
+  font-family: inherit;
+  background: var(--background-color);
+  color: var(--text-color);
+  width: max-content;
+  border: 1px solid gray;
+  font-size: 1.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 4rem;
+}
+
+#loading {
+  font-size: 2rem;
+}
+
+.switch {
+  width: 45px;
+  height: 32px;
+  background: var(--app-color);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.switch[data-ison='true'] {
+  justify-content: flex-end;
+}
+
+.handle {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 40px;
+}
+
+.shapes-5 {
+  width: 40px;
+  height: 40px;
+  color: var(--app-color);
+  background: linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0), linear-gradient(currentColor 0 0),
+    linear-gradient(currentColor 0 0);
+  background-size: 21px 21px;
+  background-repeat: no-repeat;
+  animation: sh5 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+}
+
+@keyframes sh5 {
+  0% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+  }
+  33% {
+    background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    width: 60px;
+    height: 60px;
+  }
+  66% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+    width: 60px;
+    height: 60px;
+  }
+  100% {
+    background-position: 100% 0, 100% 100%, 0 100%, 0 0;
+  }
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.question-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+#question {
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.option-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.btn-option {
+  font-family: inherit;
+  padding: 2rem;
+  border: 1px solid var(--text-color);
+  transition: all 1s;
+}
+
+.btn-option:not(:disabled):hover {
+  cursor: pointer;
+  background: var(--app-color);
+}
+
+.btn-option.wrong {
+  background: linear-gradient(to right, #333333, #dd1818);
+  color: whitesmoke;
+}
+
+.btn-option.correct {
+  background: linear-gradient(to right, #11998e, #38ef7d);
+  color: black;
+}
+
+#error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.error-message {
+  color: var(--text-color);
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.btn {
+  padding: 1rem;
+  border: 1px solid;
+  font-family: inherit;
+  background: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+#finish-text {
+  font-size: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
