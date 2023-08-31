@@ -1,5 +1,6 @@
-/* RESETS */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+/* RESETS */
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ button {
 body {
   background: var(--background-color);
   color: var(--text-color);
-  font-family: 'Nunito Sans Normal', sans-serif;
+  font-family: 'Quicksand', 'Nunito Sans Normal', sans-serif;
   padding: 3rem;
   transition: all 1s;
 }
@@ -56,6 +57,17 @@ header {
 
 .header h1 {
   font-size: 2rem;
+}
+
+.progress {
+  margin: 4rem 0;
+  font-size: 1.8rem;
+  color: var(--app-color);
+  width: 100%;
+}
+
+#progress-bar {
+  width: 100%;
 }
 
 .requirement {
@@ -89,7 +101,7 @@ select {
 }
 
 select option {
-  font-family: 'Nunito Sans Normal';
+  font-family: 'Quicksand', 'Nunito Sans Normal';
   font-size: 1.5rem;
 }
 

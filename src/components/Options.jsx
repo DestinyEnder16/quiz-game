@@ -5,7 +5,7 @@ function Quiz({ state, curIndex, dispatch }) {
   return (
     <div className="question">
       <span className="question-number">
-        {curIndex < 10 ? 0 : ''}
+        {curIndex + 1 < 10 ? 0 : ''}
         {state.curIndex + 1}
       </span>
       <div id="question">{curQuestion.question}</div>

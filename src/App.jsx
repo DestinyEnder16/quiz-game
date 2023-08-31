@@ -10,6 +10,7 @@ import Error from './components/Error';
 import NextButton from './components/NextButton';
 import Footer from './components/Footer';
 import FinishPage from './components/FinishPage';
+import Progress from './components/Progress';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -88,6 +89,7 @@ function App() {
 
         {state.questions[0] !== undefined && state.status !== 'finish' ? (
           <>
+            <Progress state={state} numQuestions={numQuestions} />
             <Options
               state={state}
               curIndex={state.curIndex}
