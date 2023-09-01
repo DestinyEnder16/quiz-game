@@ -5,7 +5,6 @@ function Category({ dispatch }) {
   const [category, setCategory] = useState('');
   const [className, setClassName] = useState('');
   useEffect(function () {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     setClassName('active');
   }, []);
   return (

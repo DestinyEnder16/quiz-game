@@ -4,7 +4,6 @@ function SetLimit({ dispatch }) {
   const [limit, setLimit] = useState(30);
   const [className, setClassName] = useState('');
   useEffect(function () {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     setClassName('active');
   }, []);
   return (

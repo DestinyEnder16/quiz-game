@@ -4,7 +4,6 @@ function DifficultyConfig({ dispatch }) {
   const [difficulty, setDifficulty] = useState('');
   const [className, setClassName] = useState('');
   useEffect(function () {
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     setClassName('active');
   }, []);
   return (
