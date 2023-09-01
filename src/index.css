@@ -61,13 +61,29 @@ header {
 
 .progress {
   margin: 4rem 0;
-  font-size: 1.8rem;
-  color: var(--app-color);
+
   width: 100%;
 }
 
 #progress-bar {
   width: 100%;
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: var(--app-color);
+  border: 1px solid #1111116a;
+}
+
+::-moz-progress-bar {
+  background-color: #38ef7d;
+}
+
+::-webkit-progress-bar {
+  background: var(--app-color);
+  color: #38ef7d;
 }
 
 .requirement {

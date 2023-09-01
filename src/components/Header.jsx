@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import React from 'react';
 
 const spring = {
@@ -20,6 +20,7 @@ function Header() {
 
   window.localStorage.setItem('mode', JSON.stringify(isOn));
 
+  // handles the toggling of the theme
   if (isOn) {
     document.body.classList.add('dark');
   } else {
