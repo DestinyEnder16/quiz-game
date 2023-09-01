@@ -74,7 +74,6 @@ progress {
   -moz-appearance: none;
   appearance: none;
   background: var(--app-color);
-  border: 1px solid #1111116a;
 }
 
 ::-moz-progress-bar {
