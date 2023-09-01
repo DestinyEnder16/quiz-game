@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import React from 'react';
 
 const spring = {
@@ -9,12 +9,22 @@ const spring = {
 };
 
 function Header() {
-  const [isOn, setIsOn] = useState(false);
+  // to ensure the user's choice of theme is remembered by the browser.
+  const logic = JSON.parse(window.localStorage.getItem('mode'));
+
+  const [isOn, setIsOn] = useState(logic ? logic : false);
 
   const toggleSwitch = () => {
-    setIsOn(!isOn);
-    document.body.classList.toggle('dark');
+    setIsOn((prev) => !prev);
   };
+
+  window.localStorage.setItem('mode', JSON.stringify(isOn));
+
+  if (isOn) {
+    document.body.classList.add('dark');
+  } else {
+    document.body.classList.remove('dark');
+  }
 
   return (
     <header className="header">
