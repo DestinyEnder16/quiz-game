@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function DifficultyConfig({ dispatch }) {
   const [difficulty, setDifficulty] = useState('');
+  const [className, setClassName] = useState('');
+  useEffect(function () {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setClassName('active');
+  }, []);
   return (
-    <div className="requirement">
+    <div className={`requirement ${className}`}>
       <p className="question">Choose Your Difficulty</p>
       <select
         onChange={(e) => {

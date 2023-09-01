@@ -71,10 +71,16 @@ header {
 }
 
 .requirement {
+  transition: all 0.5s;
   font-size: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transform: translateX(-200%);
+}
+
+.requirement.active {
+  transform: translateX(0%);
 }
 
 .question {

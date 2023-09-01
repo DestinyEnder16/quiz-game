@@ -2,9 +2,6 @@ import { useEffect, useState } from 'react';
 
 function Quiz({ dispatch, state }) {
   const [msg, setMsg] = useState('Loading Questions...');
-  console.log(
-    `the-trivia-api.com/v2/questions?limit=${state.limit}&categories=${state.category}&difficulties=${state.difficulty}`
-  );
 
   useEffect(() => {
     const fetchData = async () => {

@@ -1,9 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function Category({ dispatch }) {
+  // let addClass = '';
   const [category, setCategory] = useState('');
+  const [className, setClassName] = useState('');
+  useEffect(function () {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setClassName('active');
+  }, []);
   return (
-    <div className="requirement">
+    <div className={`requirement ${className}`}>
       <p className="question">Select Your Category</p>
       <select
         onChange={(e) => {

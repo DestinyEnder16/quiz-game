@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 function SetLimit({ dispatch }) {
   const [limit, setLimit] = useState(30);
+  const [className, setClassName] = useState('');
+  useEffect(function () {
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    setClassName('active');
+  }, []);
   return (
-    <div className="requirement">
+    <div className={`requirement ${className}`}>
       <p className="question">How Many Questions Do You Want To Answer?</p>
       <input
         type="range"
