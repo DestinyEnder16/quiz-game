@@ -18,7 +18,7 @@ function Header() {
 
   return (
     <header className="header">
-      <h1>Quiz App</h1>
+      <h1>Quiz Game</h1>
       <div className="switch" data-ison={isOn} onClick={toggleSwitch}>
         <motion.div className="handle" layout transition={spring} />
       </div>
