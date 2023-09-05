@@ -8,8 +8,8 @@
 }
 html {
   font-size: 62.5%;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 ul {
   list-style-type: none;
