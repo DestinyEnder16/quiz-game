@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 
 function FinishPage({ state, numQuestions }) {
   const percentage = (state.questionsAnswered / numQuestions) * 100;
-  const margin = { marginTop: '2.5rem' };
+  const margin = { marginTop: '3rem' };
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(function () {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 3000);
   }, []);
 
   if (!isLoading) {

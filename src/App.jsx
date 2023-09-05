@@ -27,6 +27,7 @@ function reducer(state, action) {
         questions: action.payload,
         timeRemaining: TIME_PER_QUESTION * +state.limit,
       };
+
     case 'dataFetchError':
       return { ...state, status: 'error', errorMessage: action.payload };
     case 'newAnswer':
@@ -50,7 +51,7 @@ function reducer(state, action) {
   }
 }
 
-const TIME_PER_QUESTION = 15;
+const TIME_PER_QUESTION = 10;
 
 const initialState = {
   status: 'initiated',
@@ -96,7 +97,9 @@ function App() {
           ''
         )}
 
-        {state.questions[0] !== undefined && state.status !== 'finish' ? (
+        {state.questions[0] !== undefined &&
+        state.status !== 'finish' &&
+        state.timeRemaining !== 0 ? (
           <>
             <Progress state={state} numQuestions={numQuestions} />
             <Options
