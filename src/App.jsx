@@ -11,6 +11,7 @@ import NextButton from './components/NextButton';
 import Footer from './components/Footer';
 import FinishPage from './components/FinishPage';
 import Progress from './components/Progress';
+import Timer from './components/Timer';
 
 function reducer(state, action) {
   switch (action.type) {
@@ -96,6 +97,7 @@ function App() {
               dispatch={dispatch}
             />
             <Footer>
+              <Timer state={state} dispatch={dispatch} />
               <NextButton
                 dispatch={dispatch}
                 state={state}
