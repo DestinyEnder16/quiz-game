@@ -7,7 +7,7 @@ function Quiz({ dispatch, state }) {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          ` https://the-trivia-api.com/api/questions?limit=${state.limit}&categories=${state.category}&difficulties=${state.difficulty}`
+          `https://the-trivia-api.com/api/questions?limit=${state.limit}&categories=${state.category}&difficulties=${state.difficulty}`
         );
         if (!res.ok) throw new Error('Network Error...');
         if (res.ok) setMsg('Starting Quiz...');
@@ -40,7 +40,7 @@ function Quiz({ dispatch, state }) {
   return (
     <>
       <div className="shapes-5"></div>
-      <span id="loading">{msg}</span>
+      <span className="loading">{msg}</span>
     </>
   );
 }

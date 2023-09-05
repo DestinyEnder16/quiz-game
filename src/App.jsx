@@ -22,7 +22,11 @@ function reducer(state, action) {
     case 'limitToggle':
       return { ...state, limit: action.payload, status: 'ready' };
     case 'setQuestions':
-      return { ...state, questions: action.payload };
+      return {
+        ...state,
+        questions: action.payload,
+        timeRemaining: TIME_PER_QUESTION * state.questions.length,
+      };
     case 'dataFetchError':
       return { ...state, status: 'error', errorMessage: action.payload };
     case 'newAnswer':
@@ -37,12 +41,16 @@ function reducer(state, action) {
       }
     case 'nextQuestion':
       return { ...state, curIndex: state.curIndex + 1, answer: null };
+    case 'tick':
+      return { ...state, timeRemaining: state.timeRemaining - 1 };
     case 'finish':
       return { ...state, status: 'finish' };
     default:
       console.log('Action is not identified!');
   }
 }
+
+const TIME_PER_QUESTION = 15;
 
 const initialState = {
   status: 'initiated',
@@ -97,7 +105,11 @@ function App() {
               dispatch={dispatch}
             />
             <Footer>
-              <Timer state={state} dispatch={dispatch} />
+              <Timer
+                state={state}
+                dispatch={dispatch}
+                timePerQuestion={TIME_PER_QUESTION}
+              />
               <NextButton
                 dispatch={dispatch}
                 state={state}
