@@ -27,6 +27,7 @@ function reducer(state, action) {
         questions: action.payload,
         timeRemaining: TIME_PER_QUESTION * +state.limit,
       };
+
     case 'dataFetchError':
       return { ...state, status: 'error', errorMessage: action.payload };
     case 'newAnswer':
