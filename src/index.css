@@ -31,6 +31,7 @@ body {
   color: var(--text-color);
   font-family: 'Quicksand', 'Nunito Sans Normal', sans-serif;
   padding: 3rem;
+  padding-bottom: 5rem;
   transition: all 1s;
 }
 
@@ -140,7 +141,7 @@ select option {
   margin-top: 4rem;
 }
 
-#loading {
+.loading {
   font-size: 2rem;
 }
 
@@ -242,6 +243,28 @@ select option {
   color: black;
 }
 
+.progress-6 {
+  width: 120px;
+  height: 22px;
+  border-radius: 20px;
+  border: 2px solid var(--text-color);
+  position: relative;
+}
+.progress-6::before {
+  content: '';
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: var(--app-color);
+  animation: p6 2s infinite;
+}
+@keyframes p6 {
+  100% {
+    inset: 0;
+  }
+}
+
 #error {
   display: flex;
   flex-direction: column;
@@ -275,4 +298,15 @@ select option {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+
+.timer {
+  font-size: 1.5rem;
+  cursor: not-allowed;
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
 }
