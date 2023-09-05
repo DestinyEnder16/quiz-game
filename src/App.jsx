@@ -97,9 +97,7 @@ function App() {
           ''
         )}
 
-        {state.questions[0] !== undefined &&
-        state.status !== 'finish' &&
-        state.timeRemaining !== 0 ? (
+        {state.questions[0] !== undefined && state.status !== 'finish' ? (
           <>
             <Progress state={state} numQuestions={numQuestions} />
             <Options

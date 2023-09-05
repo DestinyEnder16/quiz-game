@@ -12,7 +12,7 @@ function Timer({ state, dispatch }) {
         if (state.timeRemaining > 0) {
           //   setTimeRemaining((prev) => prev - 1);
           dispatch({ type: 'tick' });
-        } else {
+        } else if (state.timeRemaining === 0) {
           dispatch({ type: 'finish' });
         }
       }, 1000);
